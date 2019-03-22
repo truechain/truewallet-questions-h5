@@ -10,6 +10,7 @@
       <li v-for="i in order" :key="i">
         <span @click="select(i)" class="ques-radio" :class="{
           'tick selected': i === selected && !showAnswer,
+          'hide': showAnswer,
           'tick right': i === 0 && showAnswer,
           'error': i === selected && error
         }"/>
@@ -97,12 +98,16 @@ export default {
   .selected
     border-color #0071BC
     background-color #0071BC
+  .hide
+    visibility hidden
   .right
     border-color #09C46A
     background-color #09C46A
+    visibility visible
   .error
     border-color #F84646
     background-color #F84646
+    visibility visible
     &:before
       content ''
       position absolute

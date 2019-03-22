@@ -1,0 +1,93 @@
+{
+  "title": "Safety Assessment",
+  "intro": "Complete safety assessment to ensure asset security",
+  "fail": "Safety assessment failed, please re-evaluate",
+  "succeed": "You have passed the security assessment",
+  "formtitle": "Questionnaire",
+  "submit": "Submit",
+  "restart": "Re-Evaluate",
+  "towallet": "Start using True Wallet",
+  "questions": [
+    {
+      "title": "From which channel is it safe to download True Wallet?",
+      "options": [
+        "Official website www.truechain.pro",
+        "Third-party application market",
+        "Download link from Baidu or Google search",
+        "WeChat"
+      ]
+    },
+    {
+      "title": "Which of the following backup methods is correct?",
+      "options": [
+        "Copy the backup mnemonic, ensure that the transcript order is correct, clear transcript, use spaces to separate each word, and keep the transcripts of the transcripts properly, such as in the safe.",
+        "Only backup mnemonics on mobile hard drives",
+        "Back up only the Keystore, but not the password of Keystore",
+        "Only backup mnemonics in mobile devices"
+      ]
+    },
+    {
+      "title": "When users use True Wallet to transfer money, they find that they have misrouted the address. Is the following correct?",
+      "options": [
+        "Due to the irreversible nature of the blockchain, there is no way to cancel the transaction and True Wallet cannot roll back the transaction.",
+        "Contact the official staff of True Wallet for the first time and request to cancel the transaction.",
+        "Contact the official staff of True Wallet for the first time and request to roll back the successfully sent transaction.",
+        "Contact the official staff of True Wallet for the first time, request to find out who the wrong transfer address is and contact the other party."
+      ]
+    },
+    {
+      "title": "If you created a new wallet with True Wallet, what do you have to do first?",
+      "options": [
+        "Back up your wallet now, including mnemonics and private keys",
+        "No special operations, just put it in the phone.",
+        "Transfer transaction now",
+        "Copy the wallet address immediately and remember the wallet password"
+      ]
+    },
+    {
+      "title": "Which of the following backup methods will minimize the risk of money piracy?",
+      "options": [
+        "Use physical media to back up your mnemonics to ensure that if you don't have a camera or other people around you, hand-written mnemonics, make sure the transcripts are clear and safe, such as in a safe.",
+        "Use screen capture to store mnemonics",
+        "Use WeChat to store plaintext private keys",
+        "Transfer Keystore using WeChat or email"
+      ]
+    },
+    {
+      "title": "Which of the following will not lead to the theft of your wallet:",
+      "options": [
+        "Others know your wallet address",
+        "Others know your plaintext private key",
+        "Others know your mnemonic",
+        "Others know your Keystore and crack your Keystore password"
+      ]
+    },
+    {
+      "title": "When you use True Wallet and find that the wallet has a transfer record that is not your own operation, the following is correct:",
+      "options": [
+        "Realize that your private key may be leaked, stop using the wallet, immediately generate a new wallet, make a wallet backup, quickly transfer your Token to a new wallet, and then contact True Wallet staff.",
+        "Leave it alone",
+        "Contact True Wallet staff first time",
+        "Ask True Wallet staff to freeze the account immediately"
+      ]
+    },
+    {
+      "title": "If you don't have a backup wallet, the following statement is correct:",
+      "options": [
+        "True Wallet is a decentralized wallet. If the private key is forgotten, it will lose all the assets in the wallet and will never be retrieved.",
+        "Can be retrieved by wallet address and transaction password",
+        "You can ask the official members of True Wallet for help.",
+        "The wallet will retrieve it on its own"
+      ]
+    },
+    {
+      "title": "The following statement is correct:",
+      "options": [
+        "Be sure to make a wallet backup before upgrading your phone system and APP version.",
+        "After the wallet is lost, or the backup information is lost, contact the True Wallet staff to help them get back.",
+        "Backup information is stored on the True Wallet server, so don't worry",
+        "Uninstalling the upgrade requires a backup wallet. Overwriting the upgrade does not require a backup."
+      ]
+    }
+  ]
+}
