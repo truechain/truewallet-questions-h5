@@ -9,7 +9,7 @@
   "towallet": "Start using True Wallet",
   "questions": [
     {
-      "title": "From which channel is it safe to download True Wallet?",
+      "title": "It is safe to download True Wallet from:",
       "options": [
         "Official website www.truechain.pro",
         "Third-party application market",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "title": "Which of the following backup methods is correct?",
+      "title": "Which of the following backup methods is correct:",
       "options": [
         "Copy the backup mnemonic, ensure that the transcript order is correct, clear transcript, use spaces to separate each word, and keep the transcripts of the transcripts properly, such as in the safe.",
         "Only backup mnemonics on mobile hard drives",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "title": "When users use True Wallet to transfer money, they find that they have misrouted the address. Is the following correct?",
+      "title": "When users use True Wallet to transfer money, they find that they have misrouted the address. Is the following correct:",
       "options": [
         "Due to the irreversible nature of the blockchain, there is no way to cancel the transaction and True Wallet cannot roll back the transaction.",
         "Contact the official staff of True Wallet for the first time and request to cancel the transaction.",
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "title": "If you created a new wallet with True Wallet, what do you have to do first?",
+      "title": "If you created a new wallet with True Wallet, what do you have to do first:",
       "options": [
         "Back up your wallet now, including mnemonics and private keys",
         "No special operations, just put it in the phone.",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "title": "Which of the following backup methods will minimize the risk of money piracy?",
+      "title": "Which of the following backup methods will minimize the risk of money piracy:",
       "options": [
         "Use physical media to back up your mnemonics to ensure that if you don't have a camera or other people around you, hand-written mnemonics, make sure the transcripts are clear and safe, such as in a safe.",
         "Use screen capture to store mnemonics",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "title": "The following statement is correct:",
+      "title": "Which of the following statement is true:",
       "options": [
         "Be sure to make a wallet backup before upgrading your phone system and APP version.",
         "After the wallet is lost, or the backup information is lost, contact the True Wallet staff to help them get back.",
