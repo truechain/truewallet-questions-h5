@@ -7,14 +7,17 @@
       <slot></slot>. {{ $t(`questions[${index}].title`) }}
     </p>
     <ul class="ques-options">
-      <li v-for="i in order" :key="i">
+      <li v-for="(i, ii) in order" :key="i">
         <span @click="select(i)" class="ques-radio" :class="{
           'tick selected': i === selected && !showAnswer,
           'hide': showAnswer,
           'tick right': i === 0 && showAnswer,
           'error': i === selected && error
         }"/>
-        <span @click="select(i)" >{{ $t(`questions[${index}].options[${i}]`) }}</span>
+        <span @click="select(i)" >
+          {{ title[ii] }}
+          {{ $t(`questions[${index}].options[${i}]`) }}
+        </span>
       </li>
     </ul>
   </li>
@@ -30,7 +33,13 @@ export default {
   data () {
     return {
       selected: -1,
-      order: [0, 1, 2, 3].sort(() => (Math.random() - 0.5))
+      order: [0, 1, 2, 3].sort(() => (Math.random() - 0.5)),
+      title: [
+        'A. ',
+        'B. ',
+        'C. ',
+        'D. '
+      ]
     }
   },
   computed: {
