@@ -3,6 +3,8 @@ import VueI18n from 'vue-i18n'
 
 import en from './en.json'
 import zh from './zh.json'
+import vi from './vi.json'
+import ko from './ko.json'
 
 Vue.use(VueI18n)
 
@@ -11,7 +13,9 @@ const i18n = new VueI18n({
   locale: 'zh',
   messages: {
     en,
-    zh
+    zh,
+    vi,
+    ko
   }
 })
 

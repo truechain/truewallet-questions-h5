@@ -1,0 +1,93 @@
+{
+  "title": "Đánh giá an toàn",
+  "intro": "Hoàn thành đánh giá bảo mật để đảm bảo an ninh tài sản",
+  "fail": "Đánh giá bảo mật không thành công, vui lòng đánh giá lại",
+  "succeed": "Bạn đã vượt qua đánh giá bảo mật",
+  "formtitle": "Mẫu đánh giá an toàn",
+  "submit": "Gửi",
+  "restart": "Đánh giá lại",
+  "towallet": "Bắt đầu sử dụng True Wallet",
+  "questions": [
+    {
+      "title": "Có an toàn không nếu tải True Wallet từ:",
+      "options": [
+        "website chính thức  www.truechain.pro",
+        "Ứng dụng của bên thứ 3 trên thị trường",
+        "Tải từ liên kết từ baidu hoặc Google search",
+        "WeChat"
+      ]
+    },
+    {
+      "title": "Những phương thức lưu trữ sau đây là đúng :",
+      "options": [
+        "Sao lưu các từ ghi nhớ, đảm bảo chính xác và rõ ràng. Phân biệt chữ và khoảng trống, lưu trữ cẩn thận ở nơi an toàn. Ví dụ cho vào trong két sắt hoặc nơi an toàn.",
+        "Chỉ lưu trữ các từ ghi nhớ trên ổ đĩa cứng",
+        "Chỉ lưu trữ file kí tự, không cần thiết trùng với password",
+        "Chỉ lưu trữ các từ ghi nhớ trên các thiết bị điện thoại"
+      ]
+    },
+    {
+      "title": "Cần phải làm gì khi chuyển tiền thông qua ví True mà phát hiện ra chuyển nhầm ví ?",
+      "options": [
+        "Do tính chất không thể đảo ngược của Blockchain, không có cách nào có thể huỷ",
+        "Liên hệ với các nhân viên chính thức của True Wallet ngay lập tức và yêu cầu hủy giao dịch vừa hoàn thành.",
+        "Liên hệ với các nhân viên chính thức của True Wallet ngay lập tức và yêu cầu đảo ngược giao dịch vừa hoàn thành.",
+        "Liên hệ với nhân viên chính thức của True Wallet và tìm xem ai là người chuyển nhầm và liên hệ họ."
+      ]
+    },
+    {
+      "title": "Nếu bạn đang sử dụng True Wallet để tạo một ví mới thì điều đầu tiên bạn cần làm là :",
+      "options": [
+        "Ngay lập tức sao lưu ví và các từ ghi nhớ kèm theo khóa riêng tư",
+        "Không có gi cả, chỉ cần đưa nó vào điện thoại",
+        "Quản lý và kiểm tra các giao dịch ngay lập tức",
+        "Ngay lập tức sao chép địa chỉ ví và ghi nhớ mật khẩu của ví"
+      ]
+    },
+    {
+      "title": "Những cách sao lưu ví nào sau đây tìm ẩn rủi ro bị đánh cắp:",
+      "options": [
+        "sử dụng các phương tiện vật lý để lưu trữ các từ ghi chú. Chắc chắn rằng các từ ghi nhớ đã được sao chép bằng tay mà không có máy quay hoặc người xung quanh.",
+        "Sử dụng hình ảnh chụp màn hình để sao lưu các từ ghi chú",
+        "Sử dụng wechat để lưu khóa riêng tư dưới dạn văn bản",
+        "Sử dụng Wechat hay hộp thư để chuyển file Keystore"
+      ]
+    },
+    {
+      "title": "Những trường hợp nào sau đây sẽ không dẫn đến việt bạn bị đánh cắp ví :",
+      "options": [
+        "Địa chỉ ví của bạn bị người khác biết",
+        "Khóa riêng tư của bạn bị người khác biết",
+        "Các từ ghi nhớ bị người khác biết",
+        "Người khác biết file Keystore và phá mật khẩu  Keystore"
+      ]
+    },
+    {
+      "title": "Khi bạn sử dụng ví True mà phát hiện ra có những giao dịch không phải do bạn thực hiện, đây là những gì bạn phải làm :",
+      "options": [
+        "Nhận ra là khóa riêng tư của bạn đã bị lộ, ngay lập tức tạo ví mới và chuyển toàn bộ tài sản sang ví mới đồng thời báo ngay cho đơn vị quản lý.",
+        "Mặc kệ nó",
+        "Liên hệ bộ phận quản lý ví True ngay lập tức",
+        "Liên hệ đơn vị quản lý ngay và kiểm tra xem ví có bị đánh cắp hay không đồng thời đóng băng ví."
+      ]
+    },
+    {
+      "title": "Nếu như bạn không sao lưu ví, những ý nào  sau đây là đúng ",
+      "options": [
+        "Ví True là ví phi tập trung vì vậy nếu bạn bị quên private key thì đồng nghĩa với việc toàn bộ tài sản của bạn trong ví sẽ bị mất và bạn sẽ không thể phục hồi được.",
+        "Ví của bạn sẽ được tự động sao lưu",
+        "Bạn có thể liên hệ bộ phận quản lý để phục hồi ví",
+        "Địa chỉ ví và mật khẩu giao dịch có thể được phục hồi"
+      ]
+    },
+    {
+      "title": "Những ý nào sau đây là đúng:",
+      "options": [
+        "Đảm bảo rằng bạn đã sao lưu ví trước khi thực hiện nâng cấp điện thoại và phiên bản ứng dụng.",
+        "Sau khi ví của bạn bị mất hoặc thông tin lưu trữ củ bạn bị mất, liên hệ bộ phận quản lý ví True để được hỗ trợ lấy lại.",
+        "Các thông tin lưu trữ được sao lưu ở server của ví True nên không cần phải lo lắng",
+        "Phiên bản nâng cấp bằng cách cài mới sẽ cần sao lưu ví trong khi nâng cấp bằng cách cài đè vào máy thì không cần"
+      ]
+    }
+  ]
+}
