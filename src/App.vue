@@ -48,13 +48,21 @@ export default {
     for (let i = 0; i < qusCount; i++) {
       order[i] = i
     }
+    const v4 = window.webkit &&
+      window.webkit.messageHandlers &&
+      window.webkit.messageHandlers.changeOrientation &&
+      window.webkit.messageHandlers.changeOrientation.postMessage
+    const postMessage = v4
+      ? window.webkit.messageHandlers.changeOrientation.postMessage
+      : window.postMessage
     return {
       state: 0,
       showAnswer: false,
       qusCount,
       selectedCount: 0,
       order: order.sort(() => (Math.random() - 0.5)),
-      answers
+      answers,
+      postMessage
     }
   },
   created () {
@@ -62,27 +70,27 @@ export default {
       this.init({ data: 'onload' })
     } else {
       document.addEventListener('message', this.init)
+      window.message = this.init
     }
   },
   methods: {
     init (e) {
-      if (/onload/.test(e.data)) {
-        const lang = e.data.match(/lang=(\w+)/)
+      const data = e.data || e
+      if (/onload/.test(data)) {
+        const lang = data.match(/lang=(\w+)/)
         if (lang && lang[1]) {
           this.$i18n.locale = lang[1]
         } else {
           this.$i18n.locale = 'zh'
         }
-        if (window.originalPostMessage) {
-          const payload = {
-            timestamp: new Date().getTime(),
-            method: 'set_title',
-            data: {
-              title: this.$t('title')
-            }
+        const payload = {
+          timestamp: new Date().getTime(),
+          method: 'set_title',
+          data: {
+            title: this.$t('title')
           }
-          window.postMessage(JSON.stringify(payload))
         }
+        this.postMessage(JSON.stringify(payload))
         document.title = this.$t('title')
         document.removeEventListener('message', this.init)
       }
@@ -112,12 +120,12 @@ export default {
       const result = this.answers.reduce((sum, answer) => sum && (answer === 0), true)
       if (result) {
         this.state = 2 // succeed
-        if (process.env.NODE_ENV === 'production' && window.originalPostMessage) {
+        if (process.env.NODE_ENV === 'production') {
           const payload = {
             timestamp: new Date().getTime(),
             method: 'custom_passexam'
           }
-          window.postMessage(JSON.stringify(payload))
+          this.postMessage(JSON.stringify(payload))
         }
       } else {
         window.scrollTo(0, 0)
@@ -129,13 +137,11 @@ export default {
       if (process.env.NODE_ENV === 'development') {
         console.log('exit')
       } else {
-        if (window.originalPostMessage) {
-          const payload = {
-            timestamp: new Date().getTime(),
-            method: 'close'
-          }
-          window.postMessage(JSON.stringify(payload))
+        const payload = {
+          timestamp: new Date().getTime(),
+          method: 'close'
         }
+        this.postMessage(JSON.stringify(payload))
       }
     }
   },
