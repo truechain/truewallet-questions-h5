@@ -39,6 +39,14 @@
 <script>
 import Question from '@/components/Question'
 
+const v4 = window.webkit &&
+  window.webkit.messageHandlers &&
+  window.webkit.messageHandlers.changeOrientation &&
+  window.webkit.messageHandlers.changeOrientation.postMessage
+const postMessage = v4
+  ? window.webkit.messageHandlers.changeOrientation.postMessage
+  : window.postMessage
+
 export default {
   name: 'app',
   data () {
@@ -48,21 +56,13 @@ export default {
     for (let i = 0; i < qusCount; i++) {
       order[i] = i
     }
-    const v4 = window.webkit &&
-      window.webkit.messageHandlers &&
-      window.webkit.messageHandlers.changeOrientation &&
-      window.webkit.messageHandlers.changeOrientation.postMessage
-    const postMessage = v4
-      ? window.webkit.messageHandlers.changeOrientation.postMessage
-      : window.postMessage
     return {
       state: 0,
       showAnswer: false,
       qusCount,
       selectedCount: 0,
       order: order.sort(() => (Math.random() - 0.5)),
-      answers,
-      postMessage
+      answers
     }
   },
   created () {
@@ -90,7 +90,7 @@ export default {
             title: this.$t('title')
           }
         }
-        this.postMessage(JSON.stringify(payload))
+        postMessage(JSON.stringify(payload))
         document.title = this.$t('title')
         document.removeEventListener('message', this.init)
       }
@@ -125,7 +125,7 @@ export default {
             timestamp: new Date().getTime(),
             method: 'custom_passexam'
           }
-          this.postMessage(JSON.stringify(payload))
+          postMessage(JSON.stringify(payload))
         }
       } else {
         window.scrollTo(0, 0)
@@ -141,7 +141,7 @@ export default {
           timestamp: new Date().getTime(),
           method: 'close'
         }
-        this.postMessage(JSON.stringify(payload))
+        postMessage(JSON.stringify(payload))
       }
     }
   },
