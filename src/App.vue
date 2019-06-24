@@ -43,9 +43,13 @@ const v4 = window.webkit &&
   window.webkit.messageHandlers &&
   window.webkit.messageHandlers.changeOrientation &&
   window.webkit.messageHandlers.changeOrientation.postMessage
-const postMessage = v4
-  ? window.webkit.messageHandlers.changeOrientation.postMessage
-  : window.postMessage
+const postMessage = message => {
+  if (v4) {
+    window.webkit.messageHandlers.changeOrientation.postMessage(message)
+  } else {
+    window.postMessage(message)
+  }
+}
 
 export default {
   name: 'app',
