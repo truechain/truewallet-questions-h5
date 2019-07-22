@@ -43,9 +43,15 @@ const v4 = window.webkit &&
   window.webkit.messageHandlers &&
   window.webkit.messageHandlers.changeOrientation &&
   window.webkit.messageHandlers.changeOrientation.postMessage
+
+const v4Android = window.Android &&
+    window.Android.changeOrientation
+
 const postMessage = message => {
   if (v4) {
     window.webkit.messageHandlers.changeOrientation.postMessage(message)
+  } else if(v4Android){
+      window.Android.changeOrientation(message);
   } else {
     window.postMessage(message)
   }
